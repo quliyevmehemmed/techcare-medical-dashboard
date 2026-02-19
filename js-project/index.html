@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <img src="./img/TestLogo.png" alt="">
+            </div>
+            <div class="navbar">
+                <div class="navbar-item">
+                    <img class = "navbar-icon" src="./img/icons/home_FILL0_wght300_GRAD0_opsz24.svg" alt="">
+                    <p>Overwiew</p>
+                </div>
+                <div class="active-navbar navbar-item">
+                    <img class = "navbar-icon" src="./img/icons/group_FILL0_wght300_GRAD0_opsz24.svg" alt="">
+                    <p>Patients</p>
+                </div>
+                <div class="navbar-item">
+                    <img class = "navbar-icon" src="./img/icons/calendar_today_FILL0_wght300_GRAD0_opsz24.svg" alt="">
+                    <p>Schedule</p>
+                </div>
+                <div class="navbar-item">
+                    <img class = "navbar-icon" src="./img/icons/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg" alt="">
+                    <p>Messeage</p>
+                </div>
+                <div class="navbar-item">
+                    <img class = "navbar-icon" src="./img/icons/credit_card_FILL0_wght300_GRAD0_opsz24.svg" alt="">
+                    <p>Transactions</p>
+                </div>
+            </div>
+            <div class="profile">
+                <img style = "width: 44px; height: 44px;" src="./img/profiles/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png" alt="">
+                <div class="profile-text">
+                    <p class = "manrope-bold">Dr. Jose Simmons</p>
+                    <p class = "title-sub">General Practitioner</p>
+                </div>
+                <hr id="profile-hr">
+                <img class = "navbar-icon" src="./img/tools/settings.svg" alt="">
+                <img class = "navbar-icon" src="./img/tools/dots3Vertical.svg" alt="">
+            </div>
+        </nav>
+        <div class="main-container">
+            <div class="left-side">
+                <div class="left-top">
+                    <span class="header-text">Patients</span>
+                    <img src="./img/tools/search.png" alt="">
+                </div>
+                <div class="left-card-container">
+                </div>
+            </div>
+
+            <main>
+                <div class="main-chart">
+                    <span class = "header-text">Diagnosis History</span>
+                    <div class="chart">
+                        <div class="chart-sub1">
+                            <span class="header-text">Blood Pressure</span>
+                            <canvas id="myChart"></canvas>
+                            <div class="chart-right"></div>
+                        </div>
+                        <div class="chart-sub2">
+
+                            <div class="systolic-header">
+                                <div class="pink-dot"></div>
+                                <span class="header-text" style = "font-size: 14px;">Systolic</span>
+                            </div>
+
+                            <span class="systolic-value">160</span>
+
+                            <div class="normality">
+                                <img id = "systolic-value-img" src="./img/tools/ArrowDown.svg" alt="">
+                                <span class="systolic-normality">Hgher Than avarage</span>
+                            </div>
+                            <hr>
+
+                            <div class="systolic-header">
+                                <div style = "background-color: #8C6FE6;"class="pink-dot"></div>
+                                <span class="header-text" style = "font-size: 14px;">Diastolic</span>
+                            </div>
+
+                            <span id = "diastolic-value" class="systolic-value">160</span>
+                            <div class="normality">
+                                <img id = "diastolic-value-img" src="./img/tools/ArrowDown.svg" alt="">
+                                <span class="diastolic-normality">Hgher Than avarage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rates">
+
+                        <div class="rate-element">
+                            <img src="./img/respiratory rate.png" alt="">
+                            <p>Respiratory Rate</p>
+                            <span id = "respiration-rate" class="data-rate">20 bpm</span>
+                            <span id = "respiration-normality" class="rate-normality">Normal</span>
+                        </div>
+
+                        <div class="rate-element">
+                            <img src="./img/temperature.png" alt="">
+                            <p>Temperature</p>
+                            <span id = "temprature-rate" class="data-rate">20 F</span>
+                            <span id = "temprature-normality" class="rate-normality">Normal</span>
+                        </div>
+
+                        <div class="rate-element">
+                            <img src="./img/HeartBPM.png" alt="">
+                            <p>Heart Rate</p>
+                            <span id = "heart-rate" class="data-rate">20 bpm</span>
+                            <span id = "heart-rate-normality" class="rate-normality">Normal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="diagnostic-list">
+                    <span class="header-text">Diagnostic List</span>
+                    <section class="diagnostic-list-header">
+                        <p style = "flex:1.4">Problem/Diagnosis</p>
+                        <p style = "flex:2; text-align: left;">Description</p>
+                        <p style = "text-align: center; flex:1.3">Status</p>
+                    </section>
+                    <div class="diagnostic-list-data-container">
+                        
+                        
+
+                    </div>
+
+                </div>
+            </main>
+
+            <div class="right-side">
+                <div class="profileCredential">
+                    <div class="profileName">
+                        <img id = "profilePic" src="./img/profiles/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png" alt="">
+                        <span id = "ProfileName"class = "header-text">Jessica Taylor</span>
+                    </div>
+                    <div class="credentials">
+                        <div class="credential">
+                            <img src="./img/icons/BirthIcon.png" alt="">
+                            <div class="credential-text">
+                                <p>Date Of Birth</p>
+                                <span id = "birth">August 23, 1996</span>
+                            </div>
+                        </div>
+                        <div class="credential">
+                            <img src="./img/icons/FemaleIcon.png" alt="">
+                            <div class="credential-text">
+                                <p>Gender</p>
+                                <span id = "Gender">Female</span>
+                            </div>
+                        </div>
+                        <div class="credential">
+                            <img src="./img/icons/PhoneIcon.png" alt="">
+                            <div class="credential-text">
+                                <p>Contact Info</p>
+                                <span id = "Contact">(415) 555-1234</span>
+                            </div>
+                        </div>
+                        <div class="credential">
+                            <img src="./img/icons/PhoneIcon.png" alt="">
+                            <div class="credential-text">
+                                <p>Emergency Contacts</p>
+                                <span id = "Emergency">(415) 555-5678</span>
+                            </div>
+                        </div>
+                        <div class="credential">
+                            <img src="./img/icons/InsuranceIcon.png" alt="">
+                            <div class="credential-text">
+                                <p>Insurance Provider</p>
+                                <span id = "Insurance">Sunrise Health Assurance</span>
+                            </div>
+                        </div>
+
+                        <button>show all information</button>
+                        </div>
+                    </div>
+                    <div class="Lab-result">
+                        <span class="header-text">Lab Results</span>
+                        <div class="lab-result-container">
+                            
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+        
+
+        <script type = "module" src="Script.js"></script>
+    </body>
+</html>

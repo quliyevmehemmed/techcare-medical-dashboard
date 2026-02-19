@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="firstdiv">
+                <i><a id="logo" href=""><img src="/img/logo.png" alt=""></a></i>
+            </div>
+            <div class="seconddiv">
+                <menu>
+                    <li><a href=""><i class="fa-solid fa-house-chimney"></i>Overwiew</a></li>
+                    <li><a class="active" href=""><i class="fa-solid fa-user-group"></i>Patients</a></li>
+                    <li><a href=""><i class="fa-solid fa-calendar"></i>Schedule</a></li>
+                    <li><a href=""><i class="fa-solid fa-message"></i>Message</a></li>
+                    <li><a href=""><i class="fa-solid fa-folder-open"></i>Transaction</a></li>
+                </menu>
+            </div>
+            <div class="doctor-panel">
+                <div><img src="img/doctor.png" alt=""></div>
+                <div class="doctor-info">
+                    <h5>Dr. Jose Simmons</h5>
+                    <p>General Practitioner</p>
+                </div>
+                <div class="hr"></div>
+                <div class="settings"><i class="fa-solid fa-gear"></i><i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="left-bar">
+                <div class="leftBarName">Patients</div>
+                <div class="carts"></div>
+            </div>
+            <div class="main-bar">
+                <div class="chartBar">
+                    <div class="main-bar-name">Diagnosis History</div>
+                    <div class="mainBar-chart">
+                        <div class="chart-div">
+                            <div class="blood-pressure">Blood Pressure</div>
+                            <canvas id="myChart" width="400" height="300" aria-label="Hello ARIA World"
+                                role="img"></canvas>
+                        </div>
+                        <div class="sys-dys-div">
+                            <div>
+                                <div class="sysdys-dot ">
+                                    <div class="dot"></div>
+                                    Systolic
+                                </div>
+                                <h1 class="sys-dys-value" id="systolic-value"></h1>
+                                <p class="sys-dys-situation" id="situation-sys"></p>
+                            </div>
+                            <div style="width: 150px; height: 1px; background-color:#707070;"></div>
+                            <div>
+                                <div class="sysdys-dot">
+                                    <div class="dot dot-mor"></div>
+                                    Diastolic
+                                </div>
+                                <h1 class="sys-dys-value" id="diastolic-value"></h1>
+                                <p class="sys-dys-situation" id="situation-dias"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mainBar_divs">
+                        <div style="background-color: #E0F3FA;" class="mainScores">
+                            <img src="./img/heart.png" alt="">
+                            <h5>Heart Rate</h5>
+                            <h1 id="bpm"></h1>
+                            <p id="situation-heart"></p>
+
+                        </div>
+                        <div style="background-color: #FFE6E9;" class="mainScores">
+                            <img src="/img/respiratory.png" alt="">
+                            <h5>Respiratory Rate</h5>
+                            <h1 id="respiratoryAvg"></h1>
+                            <p id="situation-rsp"></p>
+                        </div>
+                        <div style="background-color: #FFE6F1;" class="mainScores">
+                            <img src="/img/temperature.png" alt="">
+                            <h5>Temperature</h5>
+                            <h1 id="temperatureAvg"></h1>
+                            <p id="situation-temp"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="diagnosticBar">
+                    <h3>Diagnostic List</h3>
+                    <div class="for-scrool">
+                        <table class="diagnostic-table" style="width: 100%;">
+                            <thead class="title-diagnostic">
+                                <tr style="text-align: left;">
+                                    <th>Problem/Diagnosis</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="diagnoatic-of-tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="right-bar">
+                <div>
+                    <div class="about-bar"></div>
+                </div>
+                <div id="results-bar">
+                    <div class="result-scroll">
+                        <h1>Lab Result</h1>
+                        <div class="results"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="/data.js"></script>
+</body>
+
+</html>
