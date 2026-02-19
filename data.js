@@ -5908,7 +5908,7 @@ function getPerson(phone_number) {
                 </div>
                 <div class ="aboutCart">
                     <div>
-                        <img src="/img/icon.gender.png" alt=""></div>
+                        <img src="img/icon.gender.png" alt=""></div>
                     <div>
                         <span>Gender</span>
                         <p>${item.gender}</p>
